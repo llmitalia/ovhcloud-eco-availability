@@ -1,4 +1,4 @@
-name = "server-monitor"
+name = 'ovhcloud-eco-availability'
 main = "src/worker.js"
 compatibility_date = "2025-05-01"
 
