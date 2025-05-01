@@ -1,0 +1,35 @@
+---
+interface Props {
+  name: string;
+  flag: string;
+  available: boolean;
+}
+
+const { name, flag, available } = Astro.props;
+---
+
+<div class={`p-6 rounded-lg shadow-sm transition-all duration-200 ${
+  available 
+    ? 'bg-black hover:shadow-md border-2 border-green-600' 
+    : 'bg-black border-2 border-red-600'
+}`}>
+  <div class="flex items-center mb-3">
+    <span class="text-2xl mr-2">{flag}</span>
+    <h5 class="text-md text-white">{name}</h5>
+  </div>
+  
+  <div class="flex justify-between items-center">
+    <span class={`text-sm ${available ? 'text-green-600' : 'text-white'}`}>
+      {available ? '🟢 Disponibile' : '🔴 Esaurito'}
+    </span>
+    {available && (
+      <a 
+        href="https://eco.ovhcloud.com/it/kimsufi/ks-a/" 
+        target="_blank"
+        class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm font-medium transition-colors"
+      >
+        Acquista ora
+      </a>
+    )}
+  </div>
+</div>
