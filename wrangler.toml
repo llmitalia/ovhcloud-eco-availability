@@ -1,4 +1,4 @@
-name = 'ovhcloud-eco-availability'
+name = 'ovhcloud-eco'
 main = "src/worker.js"
 compatibility_date = "2025-05-01"
 
